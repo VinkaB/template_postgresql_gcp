@@ -16,7 +16,6 @@ pipeline {
     string(name: 'REGION', defaultValue: '', description: 'Región')
     string(name: 'ZONE', defaultValue: '', description: 'Zona')
     choice(name: 'ENVIRONMENT', choices: ['beta', 'pre prod', 'productivo'], description: 'Ambiente')
-    string(name: 'TYPE', defaultValue: '', description: 'Tipo (libre)')
     string(name: 'DB_INSTANCE_NAME', defaultValue: '', description: 'Nombre instancia')
     string(name: 'DB_INSTANCE_ID', defaultValue: '', description: 'ID instancia')
     choice(name: 'DB_AVAILABILITY_TYPE', choices: ['regional', 'single zone'], description: 'Disponibilidad')
@@ -75,7 +74,6 @@ pipeline {
             REGION: params.REGION,
             ZONE: params.ZONE,
             ENVIRONMENT: params.ENVIRONMENT,
-            TYPE: params.TYPE,
             DB_INSTANCE_NAME: params.DB_INSTANCE_NAME,
             DB_INSTANCE_ID: params.DB_INSTANCE_ID,
             DB_AVAILABILITY_TYPE: params.DB_AVAILABILITY_TYPE,
